@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 # --- Page Configuration ---
 # Set the layout to wide mode for better visualization space
 st.set_page_config(
-    page_title="Advanced Server Monitoring Dashboard",
+    page_title="Health-Check Monitoring Dashboard",
     page_icon="📡",
     layout="wide"
 )
@@ -20,7 +20,7 @@ def read_file(uploaded_file):
         return pd.read_excel(uploaded_file, engine='openpyxl')
 
 # --- Main Application ---
-st.title("📡 Advanced Server Monitoring Dashboard")
+st.title("📡 Health-Check Monitoring Dashboard")
 st.write(
     "Upload a report to analyze server activity, or upload two reports to compare them."
 )
@@ -184,3 +184,4 @@ if new_report_file is not None:
 
 else:
     st.info("Awaiting file upload...")
+
